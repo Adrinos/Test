@@ -1,0 +1,9 @@
+C:\Users\Gareth\Documents\Repos\Asos\ASOS SE Code Test - [Your Name]\Consumer\bin\Debug\Harness.dll
+C:\Users\Gareth\Documents\Repos\Asos\ASOS SE Code Test - [Your Name]\Consumer\bin\Debug\Harness.pdb
+C:\Users\Gareth\Documents\Repos\Asos\ASOS SE Code Test - [Your Name]\Consumer\bin\Debug\App.dll
+C:\Users\Gareth\Documents\Repos\Asos\ASOS SE Code Test - [Your Name]\Consumer\bin\Debug\App.pdb
+C:\Users\Gareth\Documents\Repos\Asos\ASOS SE Code Test - [Your Name]\Consumer\obj\Debug\Harness.csprojAssemblyReference.cache
+C:\Users\Gareth\Documents\Repos\Asos\ASOS SE Code Test - [Your Name]\Consumer\obj\Debug\Harness.csproj.CoreCompileInputs.cache
+C:\Users\Gareth\Documents\Repos\Asos\ASOS SE Code Test - [Your Name]\Consumer\obj\Debug\Harness.csproj.CopyComplete
+C:\Users\Gareth\Documents\Repos\Asos\ASOS SE Code Test - [Your Name]\Consumer\obj\Debug\Harness.dll
+C:\Users\Gareth\Documents\Repos\Asos\ASOS SE Code Test - [Your Name]\Consumer\obj\Debug\Harness.pdb

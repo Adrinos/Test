@@ -45,3 +45,13 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.nupkg
+*.log
+*.sql
+*.sqlite
+*\packages\*
+ASOS SE Code Test - [Your Name]/packages/Castle.Core.4.3.1/CHANGELOG.md
+*.lock
+ASOS SE Code Test - [Your Name]/.vs/App/v15/Server/sqlite3/storage.ide
+ASOS SE Code Test - [Your Name]/.vs/App/v15/Server/sqlite3/storage.ide-wal
+ASOS SE Code Test - [Your Name]/.vs/App/v15/Server/sqlite3/storage.ide-shm
