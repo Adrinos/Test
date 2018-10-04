@@ -44,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomerValidator.cs" />
+    <Compile Include="Facade\CustomerDataAccessFacade.cs" />
+    <Compile Include="Facade\ICustomerDataAccessFacade.cs" />
+    <Compile Include="Interfaces\ICustomerValidator.cs" />
     <Compile Include="Interfaces\ICustomerCreditServiceClient.cs" />
     <Compile Include="Objects\Classification.cs" />
     <Compile Include="Objects\Company.cs" />
