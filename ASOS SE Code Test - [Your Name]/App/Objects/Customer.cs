@@ -1,6 +1,6 @@
 using System;
 
-namespace App
+namespace App.Objects
 {
     public class Customer
     {

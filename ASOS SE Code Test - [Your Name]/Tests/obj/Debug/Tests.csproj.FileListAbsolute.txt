@@ -126,3 +126,6 @@ C:\Users\Gareth\Documents\Repos\Asos\ASOS SE Code Test - [Your Name]\Tests\obj\D
 C:\Users\Gareth\Documents\Repos\Asos\ASOS SE Code Test - [Your Name]\Tests\obj\Debug\Tests.csproj.CopyComplete
 C:\Users\Gareth\Documents\Repos\Asos\ASOS SE Code Test - [Your Name]\Tests\obj\Debug\Tests.dll
 C:\Users\Gareth\Documents\Repos\Asos\ASOS SE Code Test - [Your Name]\Tests\obj\Debug\Tests.pdb
+C:\Users\Gareth\Documents\Repos\Asos\ASOS SE Code Test - [Your Name]\Tests\bin\Debug\Harness.dll
+C:\Users\Gareth\Documents\Repos\Asos\ASOS SE Code Test - [Your Name]\Tests\bin\Debug\App.dll.config
+C:\Users\Gareth\Documents\Repos\Asos\ASOS SE Code Test - [Your Name]\Tests\bin\Debug\Harness.pdb

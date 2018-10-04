@@ -1,4 +1,4 @@
-namespace App
+namespace App.Objects
 {
     public class Company
     {

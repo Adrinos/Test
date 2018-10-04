@@ -80,7 +80,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CustomerServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +90,10 @@
     <ProjectReference Include="..\App\App.csproj">
       <Project>{C0BC6C85-09A4-4F1C-B42C-D5628566B38B}</Project>
       <Name>App</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Consumer\Harness.csproj">
+      <Project>{d180035c-e19b-4bab-8156-66d27d68af1b}</Project>
+      <Name>Harness</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
