@@ -1,24 +1,16 @@
 ﻿using System;
-using App.Interfaces;
 using App.Objects;
 using App.Strategies;
-using Moq;
 using Shouldly;
 using Xunit;
 
-namespace Tests
+namespace Tests.Tests
 {
-    public class ImportantClientStrategyTests
+    public class VeryImportantClientStrategyTests
     {
-        private Mock<ICustomerCreditServiceClient> CustomerCreditServiceClientMock { get; }
-
-        public ImportantClientStrategyTests()
-        {
-            CustomerCreditServiceClientMock = new Mock<ICustomerCreditServiceClient>();
-        }
 
         [Fact]
-        public void ImportantClientGetsCreditDoubled()
+        public void VeryImportantClientGetsNoCredit()
         {
             var customer = new Customer
             {
@@ -37,14 +29,11 @@ namespace Tests
                 CreditLimit = 0
             };
 
-            CustomerCreditServiceClientMock
-                .Setup(x => x.GetCreditLimit(customer.Firstname, customer.Surname, customer.DateOfBirth)).Returns(500);
-
-            var sut = new ImportantClientStrategy(CustomerCreditServiceClientMock.Object);
+            var sut = new VeryImportantClientStrategy();
 
             var result = sut.DoCreditCheck(customer);
 
-            result.CreditLimit.ShouldBe(1000);
+            result.CreditLimit.ShouldBe(0);
         }
     }
 }

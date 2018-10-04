@@ -8,7 +8,7 @@ using Moq;
 using Shouldly;
 using Xunit;
 
-namespace Tests
+namespace Tests.Tests
 {
     public class CustomerServiceTests
     {
