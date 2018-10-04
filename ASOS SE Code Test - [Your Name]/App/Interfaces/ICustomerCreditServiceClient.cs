@@ -1,5 +1,6 @@
 ﻿using System.ServiceModel;
 using System.ServiceModel.Description;
+using App.Services;
 
 namespace App.Interfaces
 {

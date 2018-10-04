@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using App.Objects;
 
-namespace App
+namespace App.Services
 {
     public static class CustomerDataAccess
     {

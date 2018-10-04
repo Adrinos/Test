@@ -81,7 +81,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomerServiceTests.cs" />
+    <Compile Include="DefaultStrategyTests.cs" />
+    <Compile Include="ImportantClientStrategyTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VeryImportantClientStrategyTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

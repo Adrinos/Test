@@ -6,7 +6,6 @@ using App.Objects;
 using App.Strategies;
 using Moq;
 using Shouldly;
-using Xbehave;
 using Xunit;
 
 namespace Tests
@@ -30,77 +29,53 @@ namespace Tests
         }
 
         [Fact]
-        public void VeryImportantClientGetsAdded()
+        public void VeryImportantClientFailsDueToNoCredit()
         {
             var sut = new CustomerService(CompanyRepositoryMock.Object, new CustomerCreditContext(CustomerCreditServiceClientMock.Object), CustomerDataAccessFacadeMock.Object, CustomerValidatorMock.Object);
             var dob = new DateTime(1991, 10, 17);
             var company = new Company
                 {Classification = Classification.Bronze, Id = 2, Name = "VeryImportantClient" };
-            var customer = new Customer
-            {
-                Company = company,
-                DateOfBirth = dob,
-                EmailAddress = "Test@Test.com",
-                Firstname = "Joe",
-                Surname = "Blogs",
-                HasCreditLimit = false,
-                Id = 0,
-                CreditLimit = 0
-            };
-            var updatedCustomer = new Customer
-            {
-                Company = company,
-                DateOfBirth = dob,
-                EmailAddress = "Test@Test.com",
-                Firstname = "Joe",
-                Surname = "Blogs",
-                HasCreditLimit = true,
-                Id = 0,
-                CreditLimit = 100
-            };
 
             CompanyRepositoryMock.Setup(x => x.GetById(2)).Returns(company);
+            CustomerValidatorMock.Setup(x => x.ValidateCustomer("Joe", "Blogs", "Test@Test.com", dob)).Returns(true);
 
             var result = sut.AddCustomer("Joe", "Blogs", "Test@Test.com" , dob, 2);
 
-            result.ShouldBe(true);
+            result.ShouldBe(false);
         }
 
         [Fact]
         public void ImportantClientGetsAdded()
         {
-            var sut = new CustomerService(CompanyRepositoryMock.Object, new CustomerCreditContext(CustomerCreditServiceClientMock.Object));
+            var sut = new CustomerService(CompanyRepositoryMock.Object, new CustomerCreditContext(CustomerCreditServiceClientMock.Object), CustomerDataAccessFacadeMock.Object, CustomerValidatorMock.Object);
             var dob = new DateTime(1991, 10, 17);
             var company = new Company
                 { Classification = Classification.Bronze, Id = 2, Name = "ImportantClient" };
-            var customer = new Customer
-            {
-                Company = company,
-                DateOfBirth = dob,
-                EmailAddress = "Test@Test.com",
-                Firstname = "Joe",
-                Surname = "Blogs",
-                HasCreditLimit = false,
-                Id = 0,
-                CreditLimit = 0
-            };
-            var updatedCustomer = new Customer
-            {
-                Company = company,
-                DateOfBirth = dob,
-                EmailAddress = "Test@Test.com",
-                Firstname = "Joe",
-                Surname = "Blogs",
-                HasCreditLimit = true,
-                Id = 0,
-                CreditLimit = 100
-            };
 
             CompanyRepositoryMock.Setup(x => x.GetById(2)).Returns(company);
+            CustomerValidatorMock.Setup(x => x.ValidateCustomer("Joe", "Blogs", "Test@Test.com", dob)).Returns(true);
+            CustomerCreditServiceClientMock.Setup(x => x.GetCreditLimit("Joe", "Blogs", dob)).Returns(500);
 
             var result = sut.AddCustomer("Joe", "Blogs", "Test@Test.com", dob, 2);
 
-            result.ShouldBe(false);
+            result.ShouldBe(true);
+        }
+
+        [Fact]
+        public void DefaultClientGetsAdded()
+        {
+            var sut = new CustomerService(CompanyRepositoryMock.Object, new CustomerCreditContext(CustomerCreditServiceClientMock.Object), CustomerDataAccessFacadeMock.Object, CustomerValidatorMock.Object);
+            var dob = new DateTime(1991, 10, 17);
+            var company = new Company
+                { Classification = Classification.Bronze, Id = 2, Name = "Test" };
+
+            CompanyRepositoryMock.Setup(x => x.GetById(2)).Returns(company);
+            CustomerValidatorMock.Setup(x => x.ValidateCustomer("Joe", "Blogs", "Test@Test.com", dob)).Returns(true);
+            CustomerCreditServiceClientMock.Setup(x => x.GetCreditLimit("Joe", "Blogs", dob)).Returns(500);
+
+            var result = sut.AddCustomer("Joe", "Blogs", "Test@Test.com", dob, 2);
+
+            result.ShouldBe(true);
         }
     }
 }

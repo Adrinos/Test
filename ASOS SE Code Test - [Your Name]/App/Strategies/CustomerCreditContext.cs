@@ -14,12 +14,19 @@ namespace App.Strategies
             var customerCreditServiceClient1 = customerCreditServiceClient;
             Strategies.Add("VeryImportantClient", new VeryImportantClientStrategy());
             Strategies.Add("ImportantClient", new ImportantClientStrategy(customerCreditServiceClient1));
-            Strategies.Add("Test", new DefaultClientStrategy(customerCreditServiceClient1));
+            Strategies.Add("", new DefaultClientStrategy(customerCreditServiceClient1));
         }
 
         public Customer DoCreditCheck(Company company, Customer customer)
         {
-            return Strategies[company.Name].DoCreditCheck(customer);
+
+            //Not happy with this, but couldn't think of a better way of having a default strategy.
+            if (Strategies.ContainsKey(company.Name))
+            {
+                return Strategies[company.Name].DoCreditCheck(customer);
+            }
+
+            return Strategies[""].DoCreditCheck(customer);
         }
     }
 }

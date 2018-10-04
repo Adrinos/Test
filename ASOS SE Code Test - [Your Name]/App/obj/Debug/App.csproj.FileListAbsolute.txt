@@ -5,3 +5,10 @@ C:\Users\Gareth\Documents\Repos\Asos\ASOS SE Code Test - [Your Name]\App\obj\Deb
 C:\Users\Gareth\Documents\Repos\Asos\ASOS SE Code Test - [Your Name]\App\obj\Debug\App.pdb
 C:\Users\Gareth\Documents\Repos\Asos\ASOS SE Code Test - [Your Name]\App\bin\Debug\App.dll.config
 C:\Users\Gareth\Documents\Repos\Asos\ASOS SE Code Test - [Your Name]\App\obj\Debug\App.csprojAssemblyReference.cache
+C:\Repos\Test\Test\ASOS SE Code Test - [Your Name]\App\bin\Debug\App.dll.config
+C:\Repos\Test\Test\ASOS SE Code Test - [Your Name]\App\bin\Debug\App.dll
+C:\Repos\Test\Test\ASOS SE Code Test - [Your Name]\App\bin\Debug\App.pdb
+C:\Repos\Test\Test\ASOS SE Code Test - [Your Name]\App\obj\Debug\App.csproj.CoreCompileInputs.cache
+C:\Repos\Test\Test\ASOS SE Code Test - [Your Name]\App\obj\Debug\App.dll
+C:\Repos\Test\Test\ASOS SE Code Test - [Your Name]\App\obj\Debug\App.pdb
+C:\Repos\Test\Test\ASOS SE Code Test - [Your Name]\App\obj\Debug\App.csprojAssemblyReference.cache

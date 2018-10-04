@@ -3,6 +3,7 @@ using App.Facade;
 using App.Interfaces;
 using App.Objects;
 using App.Repository;
+using App.Services;
 using App.Strategies;
 
 namespace App
@@ -55,7 +56,7 @@ namespace App
                 return false;
             }
 
-            CustomerDataAccess.AddCustomer(updatedCustomer);
+            _customerDataAccessFacade.AddCustomer(customer);
 
             return true;
         }
