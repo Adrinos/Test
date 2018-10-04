@@ -27,7 +27,7 @@ namespace Tests
             CustomerDataAccessFacadeMock = new Mock<ICustomerDataAccessFacade>();
         }
 
-        [Fact(Skip = "These tests can only be run once at a time, I would use ICollectionFixture to solve this but didn't want to go crazy")]
+        [Fact(Skip = "These tests can only be run once at a time, I would use ICollectionFixture to solve this but didn't have time")]
         public void VeryImportantClientFailsDueToNoCredit()
         {
             var sut = new CustomerService(CompanyRepositoryMock.Object, new CustomerCreditContext(CustomerCreditServiceClientMock.Object), CustomerDataAccessFacadeMock.Object, CustomerValidatorMock.Object);
